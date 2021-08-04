@@ -2,7 +2,7 @@
 
 @section ('content')
 
-    <div class="w-1/2 mx-auto space-y-4 my-10 h-1/2 overflow-y-auto">
+    <div class="w-1/2 mx-auto space-y-4 my-10">
         @foreach($schedules as $schedule)
             <div class="px-6 py-1 sticky top-0 mb-2 text-white text-semibold text-lg bg-yellow-300 rounded-md">
                 <p>{{ \Carbon\Carbon::createFromFormat('Y-m-d', $schedule->date)->format('l') }}</p>
@@ -53,6 +53,8 @@
 
             </div>
         @endforeach
+
+        {{ $schedules->onEachSide(2)->links() }}
     </div>
 
 @endsection

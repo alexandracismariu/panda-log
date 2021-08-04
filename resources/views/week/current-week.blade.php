@@ -20,7 +20,7 @@
     </div>
 
     <div class="w-1/2 mx-auto space-y-4 my-10 py-4">
-        <div class="space-y-4 h-4/6 overflow-y-auto">
+        <div class="space-y-4 h-5/6 overflow-y-auto">
         @foreach($schedules as $schedule)
             <div class="px-6 py-1 sticky top-0 mb-2 text-white text-semibold text-lg bg-yellow-300 rounded-md">
                 <p>{{ \Carbon\Carbon::createFromFormat('Y-m-d', $schedule->date)->format('l') }}</p>

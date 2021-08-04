@@ -15,7 +15,7 @@ class ScheduleController extends Controller
      */
     public function index()
     {
-        $schedules = Schedule::orderBy('date', 'desc')->get();
+        $schedules = Schedule::orderBy('date', 'desc')->paginate(4);
 
         return view('schedules.index', ['schedules' => $schedules]);
     }

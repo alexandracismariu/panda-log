@@ -21,7 +21,7 @@ class CurrentWeekController extends Controller
             $seconds += $schedule->time->totalSeconds;
         }
 
-        $working_seconds = 20 * 3600;
+        $working_seconds = 40 * 3600;
         $seconds_remaining = $working_seconds - $seconds;
 
         return view('week.current-week', [

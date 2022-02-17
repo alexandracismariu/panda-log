@@ -14,7 +14,7 @@ class CurrentWeekController extends Controller
         $schedules = Schedule::whereBetween('date', [now()->startOfWeek(), now()->endOfWeek()])
             ->orderBy('date', 'asc')
             ->orderBy('start', 'asc')
-            ->get();
+            ->paginate(4);
 
         $seconds = 0;
         foreach ($schedules as $schedule) {
